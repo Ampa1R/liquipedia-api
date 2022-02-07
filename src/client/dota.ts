@@ -1,7 +1,7 @@
-import { DotaApi } from "src/api/dota";
-import { DotaParser } from "src/parser/dota";
+import { DotaApi } from "../api/dota";
+import { DotaParser } from "../parser/dota";
 import { Config } from "src/types/config";
-import { Tournaments } from "src/types/tournaments";
+import { TournamentTier } from "../types/tournaments";
 
 export class DotaClient {
   private api: DotaApi;
@@ -32,8 +32,8 @@ export class DotaClient {
     const response = await this.api.getTransfers();
   }
 
-  async getUpcomingAndOngoingMatches(): Promise<any> {
-    const response = await this.api.getUpcomingAndOngoingMatches();
+  async getMatches(): Promise<any> {
+    const response = await this.api.getMatches();
     return this.parser.parseMatches(response.parse.text["*"]);
   }
 
@@ -49,9 +49,8 @@ export class DotaClient {
     const response = await this.api.getPatches();
   }
 
-  async getTournaments(
-    tournamentType: Tournaments = Tournaments.All
-  ): Promise<any> {
+  async getTournaments(tournamentType: TournamentTier = TournamentTier.All): Promise<any> {
     const response = await this.api.getTournaments(tournamentType);
+    return this.parser.parseTournaments(response.parse.text["*"]);
   }
 }

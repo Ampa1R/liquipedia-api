@@ -11,8 +11,8 @@ export enum MatchStatus {
 }
 
 export type Match = {
-  homeTeam: MatchTeam;
-  awayTeam: MatchTeam;
+  leftTeam: MatchTeam;
+  rightTeam: MatchTeam;
   bestOf: number;
   status: MatchStatus;
   startTime?: Date;

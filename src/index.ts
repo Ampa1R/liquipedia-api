@@ -1,9 +1,9 @@
-import { DotaApi } from "./api/dota";
+import { DotaClient } from "./client/dota";
 import { Config } from "./types/config";
 
 export class LiquipediaApi {
-  dota: DotaApi;
+  dota: DotaClient;
   constructor(private config: Config) {
-    this.dota = new DotaApi(config);
+    this.dota = new DotaClient(config);
   }
 }

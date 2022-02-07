@@ -19,7 +19,8 @@
       "ES2018",
       "ES2019",
       "ES2020",
-      "ES2021"
+      "ES2021",
+      "ESNext"
     ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
     // "jsx": "preserve",                                /* Specify what JSX code is generated. */
     "experimentalDecorators": true /* Enable experimental support for TC39 stage 2 draft decorators. */,
@@ -110,6 +111,6 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": ["src/**/*"],
+  "include": ["src/index.ts", "src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

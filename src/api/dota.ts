@@ -1,7 +1,7 @@
-import { Request } from "src/common/request";
+import { Request } from "../common/request";
 import { Config } from "src/types/config";
-import { Game } from "src/types/games";
-import { Tournaments } from "src/types/tournaments";
+import { Game } from "../types/games";
+import { TournamentTier } from "src/types/tournaments";
 
 export class DotaApi {
   private request: Request;
@@ -30,7 +30,7 @@ export class DotaApi {
     return this.request.get("Portal:Transfers");
   }
 
-  getUpcomingAndOngoingMatches() {
+  getMatches() {
     return this.request.get("Liquipedia:Upcoming_and_ongoing_matches");
   }
 
@@ -46,7 +46,7 @@ export class DotaApi {
     return this.request.get("Portal:Patches");
   }
 
-  getTournaments(tournamentType: Tournaments) {
+  getTournaments(tournamentType: TournamentTier) {
     return this.request.get(tournamentType);
   }
 }

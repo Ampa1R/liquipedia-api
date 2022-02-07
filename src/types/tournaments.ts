@@ -1,4 +1,4 @@
-export enum Tournaments {
+export enum TournamentTier {
   All = "Portal:Tournaments",
   Tier1 = "Tier_1_Tournaments",
   Tier2 = "Tier_2_Tournaments",
@@ -8,4 +8,23 @@ export enum Tournaments {
   Monthly = "Monthly_Tournaments",
   Weekly = "Weekly_Tournaments",
   ShowMatches = "Show_Matches",
+}
+
+export enum TournamentStatus {
+  Upcoming = "Upcoming",
+  Ongoing = "Ongoing",
+  Completed = "Completed",
+}
+
+export interface Tournament {
+  tier: TournamentTier;
+  status: TournamentStatus;
+  name: string;
+  url: string;
+  dates: string;
+  teams: string;
+  prizePool: string;
+  hostLocation: string;
+  winner: string;
+  runnerUp: string;
 }
