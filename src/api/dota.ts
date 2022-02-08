@@ -1,7 +1,7 @@
-import { Request } from "../common/request";
-import { Config } from "src/types/config";
-import { Game } from "../types/games";
-import { TournamentTier } from "src/types/tournaments";
+import { Config } from 'src/types/config';
+import { TournamentTier } from 'src/types/dota/tournaments';
+import { Request } from '../common/request';
+import { Game } from '../types/dota/games';
 
 export class DotaApi {
   private request: Request;
@@ -11,7 +11,7 @@ export class DotaApi {
   }
 
   getPlayers() {
-    return this.request.get("Players_(all)");
+    return this.request.get('Players_(all)');
   }
 
   // getPlayer(name: string) {
@@ -19,7 +19,7 @@ export class DotaApi {
   // }
 
   getTeams() {
-    return this.request.get("Portal:Teams");
+    return this.request.get('Portal:Teams');
   }
 
   // getTeam(name: string) {
@@ -27,23 +27,23 @@ export class DotaApi {
   // }
 
   getTransfers() {
-    return this.request.get("Portal:Transfers");
+    return this.request.get('Portal:Transfers');
   }
 
   getMatches() {
-    return this.request.get("Liquipedia:Upcoming_and_ongoing_matches");
+    return this.request.get('Liquipedia:Upcoming_and_ongoing_matches');
   }
 
   getHeroes() {
-    return this.request.get("Portal:Heroes");
+    return this.request.get('Portal:Heroes');
   }
 
   getItems() {
-    return this.request.get("Portal:Items");
+    return this.request.get('Portal:Items');
   }
 
   getPatches() {
-    return this.request.get("Portal:Patches");
+    return this.request.get('Portal:Patches');
   }
 
   getTournaments(tournamentType: TournamentTier) {

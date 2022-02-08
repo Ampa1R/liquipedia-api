@@ -1,5 +1,5 @@
 export type RequestHeaders = {
-  acceptEncoding?: "gzip" | "compress" | "deflate" | "br" | "identity" | "*";
+  acceptEncoding?: 'gzip' | 'compress' | 'deflate' | 'br' | 'identity' | '*';
   userAgent?: string;
 };
 
@@ -12,7 +12,7 @@ export type Response = {
   parse: {
     displaytitle: string;
     text: {
-      "*": string;
+      '*': string;
     };
     title: string;
     pageid: number;
