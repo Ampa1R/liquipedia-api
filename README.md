@@ -6,6 +6,8 @@ install package
 npm i liquipedia
 ```
 
+Please refer to [https://liquipedia.net/dota2/api.php](liquipedia's terms of use) for rate-limiting information.
+
 init api
 ```ts
 import { LiquipediaApi } from '.';
