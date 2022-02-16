@@ -19,14 +19,13 @@ const liquipediaApi = new LiquipediaApi({
 
 ###  Dota
 
-#### getPlayers
-
 #### getTeams
 ```ts
 api.dota.getTeams()
 ```
+<details>
+  <summary>response example</summary>
 
-response example
 ```ts
 [
   {
@@ -43,13 +42,16 @@ response example
   },
 ]
 ```
+</details>
 
 #### getTransfers
 ```ts
 api.dota.getTransfers()
 ```
 
-response example
+<details>
+  <summary>response example</summary>
+  
 ```ts
 [
   {
@@ -84,6 +86,7 @@ response example
   },
 ]
 ```
+</details>
 
 
 #### getMatches
@@ -92,7 +95,9 @@ response example
 api.dota.getMatches()
 ```
 
-response example
+<details>
+  <summary>response example</summary>
+
 ```ts
 [
   {
@@ -107,13 +112,17 @@ response example
   }
 ]
 ```
+</details>
 
 #### getHeroes
 ```ts
 api.dota.getHeroes()
 ```
 
-response example
+
+<details>
+  <summary>response example</summary>
+  
 ```ts
 [
   {
@@ -130,13 +139,16 @@ response example
   },
 ]
 ```
+</details>
 
 #### getItems
 ```ts
 api.dota.getItems()
 ```
 
-response example
+<details>
+  <summary>response example</summary>
+
 ```ts
 [
   {
@@ -157,13 +169,17 @@ response example
   },
 ]
 ```
+</details>
 
 #### getPatches
 ```ts
 api.dota.getPatches()
 ```
 
-response example
+
+<details>
+  <summary>response example</summary>
+
 ```ts
 [
   {
@@ -185,13 +201,17 @@ response example
   },
 ]
 ```
+</details>
 
 #### getTournaments
 ```ts
 api.dota.getTournaments()
 ```
 
-response example
+
+<details>
+  <summary>response example</summary>
+  
 ```ts
 [
   {
@@ -208,3 +228,4 @@ response example
   },
 ]
 ```
+</details>
