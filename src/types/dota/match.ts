@@ -18,6 +18,7 @@ export type Match = {
   startTime?: Date;
   twitchStream?: string;
   tournamentName?: string;
+  tournamentShortName?: string;
 };
 
 export interface MatchClient {

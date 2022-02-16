@@ -1,4 +1,10 @@
 import { Config } from 'src/types/config';
+import { Hero } from 'src/types/dota/hero';
+import { Match } from 'src/types/dota/match';
+import { Patch } from 'src/types/dota/patch';
+import { Player } from 'src/types/dota/player';
+import { Team } from 'src/types/dota/team';
+import { Transfer } from 'src/types/dota/transfer';
 import { DotaApi } from '../api/dota';
 import { DotaParser } from '../parser/dota';
 import { TournamentTier } from '../types/dota/tournaments';
@@ -13,41 +19,48 @@ export class DotaClient {
     this.parser = new DotaParser();
   }
 
-  async getPlayers(): Promise<any> {
+  async getPlayers(): Promise<Player[]> {
+    throw new Error('TODO: create getPlayers method');
     const response = await this.api.getPlayers();
+    // return this.parser.parsePlayers(response.parse.text['*']);
   }
 
   // async getPlayer(name: string): Promise<any> {
   // const response = await return this.api.getPlayer();
   // }
 
-  async getTeams(): Promise<any> {
+  async getTeams(): Promise<Team[]> {
     const response = await this.api.getTeams();
+    return this.parser.parseTeams(response.parse.text['*']);
   }
 
   // async getTeam(name: string): Promise<any> {
   // const response = await return this.api.getTeam();
   // }
 
-  async getTransfers(): Promise<any> {
+  async getTransfers(): Promise<Transfer[]> {
     const response = await this.api.getTransfers();
+    return this.parser.parseTransfers(response.parse.text['*']);
   }
 
-  async getMatches(): Promise<any> {
+  async getMatches(): Promise<Match[]> {
     const response = await this.api.getMatches();
     return this.parser.parseMatches(response.parse.text['*']);
   }
 
-  async getHeroes(): Promise<any> {
+  async getHeroes(): Promise<Hero[]> {
     const response = await this.api.getHeroes();
+    return this.parser.parseHeroes(response.parse.text['*']);
   }
 
   async getItems(): Promise<any> {
     const response = await this.api.getItems();
+    return this.parser.parseItems(response.parse.text['*']);
   }
 
-  async getPatches(): Promise<any> {
+  async getPatches(): Promise<Patch[]> {
     const response = await this.api.getPatches();
+    return this.parser.parsePatches(response.parse.text['*']);
   }
 
   async getTournaments(tournamentType: TournamentTier = TournamentTier.All): Promise<any> {

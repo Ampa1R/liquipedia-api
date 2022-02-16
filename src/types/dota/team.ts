@@ -1,17 +1,15 @@
-export type TeamMember = {
-  nickname: string;
-  fullName: string;
-  joinDate: Date;
-  position: string;
-};
+export enum TeamRegion {
+  NA = 'North America',
+  SA = 'South America',
+  EU = 'Europe',
+  CIS = 'CIS',
+  CHINA = 'China',
+  ASIA = 'Southeast Asia',
+}
 
 export type Team = {
   name: string;
-  roster: TeamMember[];
-  region: string;
-  captain?: string;
+  region: TeamRegion;
+  url: string;
+  logo: string;
 };
-
-export interface TeamClient {
-  getTeam(teamName: string): Promise<Team>;
-}

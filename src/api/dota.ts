@@ -46,7 +46,7 @@ export class DotaApi {
     return this.request.get('Portal:Patches');
   }
 
-  getTournaments(tournamentType: TournamentTier) {
-    return this.request.get(tournamentType);
+  getTournaments(tournamentTier: TournamentTier) {
+    return this.request.get(tournamentTier);
   }
 }
