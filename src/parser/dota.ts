@@ -213,7 +213,7 @@ export class DotaParser {
       const patch: Patch = {
         version,
         date: new Date(date),
-        changes: changes.replaceAll(/^\n(\s)?/g, ''),
+        changes: changes.replace(/^\n(\s)?/g, ''),
         url: `https://liquipedia.net${url}`,
       };
       patches.push(patch);
