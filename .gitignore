@@ -107,4 +107,4 @@ dist
 .vscode
 
 # TypeScript build result
-lib
+lib/
