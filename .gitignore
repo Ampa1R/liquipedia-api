@@ -103,4 +103,8 @@ dist
 # TernJS port file
 .tern-port
 
+# VSCode project files
 .vscode
+
+# TypeScript build result
+lib
