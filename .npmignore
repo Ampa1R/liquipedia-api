@@ -30,3 +30,4 @@ example/
 tsconfig.json
 .eslintrc
 setup.sh
+tsconfig.tsbuildinfo
