@@ -2,7 +2,7 @@
   "name": "liquipedia-api",
   "version": "1.0.1",
   "description": "Node.js Liquipedia API",
-  "repository": "git@github.com:Ampa1R/liquipedia-api.git",
+  "repository": "github:Ampa1R/liquipedia-api",
   "author": "Filipp Vasilev <hi.ampa1r@gmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
