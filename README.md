@@ -3,7 +3,7 @@
 # Intro
 install package
 ```bash
-npm i liquipedia
+npm i liquipedia-api
 ```
 
 Please refer to [liquipedia's terms of use](https://liquipedia.net/api-terms-of-use) for rate-limiting information. 

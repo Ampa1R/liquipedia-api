@@ -2,29 +2,41 @@
   "name": "liquipedia-api",
   "version": "1.0.2",
   "description": "Node.js Liquipedia API",
-  "repository": "github:Ampa1R/liquipedia-api",
   "author": "Filipp Vasilev <hi.ampa1r@gmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js"
   },
+  "keywords": [
+    "liquipedia",
+    "dota",
+    "csgo",
+    "esports",
+    "dota2",
+    "counter-strike"
+  ],
+  "repository": "github:Ampa1R/liquipedia-api",
+  "bugs": {
+    "url": "https://github.com/Ampa1R/3nv/issues"
+  },
+  "homepage": "https://github.com/Ampa1R/3nv#readme",
   "scripts": {
     "build": "tsc"
   },
   "devDependencies": {
     "@types/node": "^17.0.15",
-    "typescript": "^4.5.5"
-  },
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.11.0",
-    "@typescript-eslint/parser": "^5.11.0",
-    "axios": "^0.25.0",
+    "typescript": "^4.5.5",
     "eslint": "^8.8.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^16.1.0",
     "eslint-plugin-import": "^2.25.4",
-    "node-html-parser": "^5.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
     "ts-node": "^10.4.0"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "node-html-parser": "^5.2.0"
   }
 }
