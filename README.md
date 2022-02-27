@@ -10,7 +10,7 @@ Please refer to [liquipedia's terms of use](https://liquipedia.net/api-terms-of-
 
 init api
 ```ts
-import { LiquipediaApi } from '.';
+import { LiquipediaApi } from 'liquipedia-api';
 
 const liquipediaApi = new LiquipediaApi({
   USER_AGENT: 'MyAwesomeProject/1.0 (my.email@gmail.com)',
