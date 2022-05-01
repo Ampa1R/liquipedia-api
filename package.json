@@ -18,9 +18,9 @@
   ],
   "repository": "github:Ampa1R/liquipedia-api",
   "bugs": {
-    "url": "https://github.com/Ampa1R/3nv/issues"
+    "url": "https://github.com/Ampa1R/liquipedia-api/issues"
   },
-  "homepage": "https://github.com/Ampa1R/3nv#readme",
+  "homepage": "https://github.com/Ampa1R/liquipedia-api#readme",
   "scripts": {
     "build": "tsc"
   },
