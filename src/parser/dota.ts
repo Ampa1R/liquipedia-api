@@ -1,6 +1,6 @@
-import { Transfer } from 'src/types/dota/transfer';
-import { Team, TeamRegion } from 'src/types/dota/team';
-import { Patch } from 'src/types/dota/patch';
+import { Transfer } from '../types/dota/transfer';
+import { Team, TeamRegion } from '../types/dota/team';
+import { Patch } from '../types/dota/patch';
 import {
   BasicItemCategory, Item, ItemType, NeutralItemTier, UpgradeItemCategory,
 } from '../types/dota/item';

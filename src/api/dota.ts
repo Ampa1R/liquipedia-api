@@ -1,5 +1,5 @@
-import { Config } from 'src/types/config';
-import { TournamentTier } from 'src/types/dota/tournaments';
+import { Config } from '../types/config';
+import { TournamentTier } from '../types/dota/tournaments';
 import { Request } from '../common/request';
 import { Game } from '../types/dota/games';
 

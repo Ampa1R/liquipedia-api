@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
-import { Game } from 'src/types/dota/games';
-import { Response } from 'src/types/request';
+import { Game } from '../types/dota/games';
+import { Response } from '../types/request';
 
 export class Request {
   private request: AxiosInstance;

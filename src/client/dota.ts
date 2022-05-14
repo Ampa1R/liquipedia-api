@@ -1,10 +1,10 @@
-import { Config } from 'src/types/config';
-import { Hero } from 'src/types/dota/hero';
-import { Match } from 'src/types/dota/match';
-import { Patch } from 'src/types/dota/patch';
-import { Player } from 'src/types/dota/player';
-import { Team } from 'src/types/dota/team';
-import { Transfer } from 'src/types/dota/transfer';
+import { Config } from '../types/config';
+import { Hero } from '../types/dota/hero';
+import { Match } from '../types/dota/match';
+import { Patch } from '../types/dota/patch';
+import { Player } from '../types/dota/player';
+import { Team } from '../types/dota/team';
+import { Transfer } from '../types/dota/transfer';
 import { DotaApi } from '../api/dota';
 import { DotaParser } from '../parser/dota';
 import { TournamentTier } from '../types/dota/tournaments';
