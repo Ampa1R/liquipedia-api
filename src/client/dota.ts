@@ -7,7 +7,8 @@ import { Team } from '../types/dota/team';
 import { Transfer } from '../types/dota/transfer';
 import { DotaApi } from '../api/dota';
 import { DotaParser } from '../parser/dota';
-import { TournamentTier } from '../types/dota/tournaments';
+import { Tournament, TournamentTier } from '../types/dota/tournaments';
+import { Item } from '../types/dota/item';
 
 export class DotaClient {
   private api: DotaApi;
@@ -25,18 +26,10 @@ export class DotaClient {
     // return this.parser.parsePlayers(response.parse.text['*']);
   }
 
-  // async getPlayer(name: string): Promise<any> {
-  // const response = await return this.api.getPlayer();
-  // }
-
   async getTeams(): Promise<Team[]> {
     const response = await this.api.getTeams();
     return this.parser.parseTeams(response.parse.text['*']);
   }
-
-  // async getTeam(name: string): Promise<any> {
-  // const response = await return this.api.getTeam();
-  // }
 
   async getTransfers(): Promise<Transfer[]> {
     const response = await this.api.getTransfers();
@@ -53,7 +46,7 @@ export class DotaClient {
     return this.parser.parseHeroes(response.parse.text['*']);
   }
 
-  async getItems(): Promise<any> {
+  async getItems(): Promise<Item[]> {
     const response = await this.api.getItems();
     return this.parser.parseItems(response.parse.text['*']);
   }
@@ -63,7 +56,7 @@ export class DotaClient {
     return this.parser.parsePatches(response.parse.text['*']);
   }
 
-  async getTournaments(tournamentType: TournamentTier = TournamentTier.All): Promise<any> {
+  async getTournaments(tournamentType: TournamentTier = TournamentTier.All): Promise<Tournament[]> {
     const response = await this.api.getTournaments(tournamentType);
     return this.parser.parseTournaments(response.parse.text['*']);
   }
