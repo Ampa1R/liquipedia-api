@@ -1,6 +1,6 @@
 {
   "name": "liquipedia-api",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Node.js Liquipedia API",
   "author": "Filipp Vasilev <hi.ampa1r@gmail.com>",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "build": "rimraf lib && tsc"
   },
   "devDependencies": {
-    "@types/node": "^17.0.15",
+    "@types/node": "20",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "eslint": "^8.8.0",
