@@ -91,14 +91,19 @@ export class DotaParser {
 
       const matchTimeContainer = matchDetails.querySelector('.timer-object');
       const matchTime = matchTimeContainer?.getAttribute('data-timestamp');
+
+      if (!leftTeamName || !rightTeamName || !bestOf || !matchTime) {
+        continue;
+      }
+
       const twitchStream = matchTimeContainer?.getAttribute('data-stream-twitch');
 
       const tournamentName = matchDetails.querySelector('.league-icon-small-image > a')?.getAttribute('title');
       const tournamentShortName = matchDetails.querySelector('.match-filler > div > div > a')?.textContent;
 
-      if (!leftTeamName || !rightTeamName || !bestOf || !matchTime) {
-        continue;
-      }
+      const matchClasses = matchDetails.getAttribute('class');
+      // Concluded matches has either 'recent-matches-left' or 'recent-matches-right' class
+      const isConcluded = matchClasses?.includes('recent-matches-');
 
       // Convert to millisecond-based timestamp (multiply by 1000)
       const startTimestamp = parseInt(matchTime, 10) * 1000;
@@ -122,9 +127,13 @@ export class DotaParser {
       };
 
       if (startTimestamp < Date.now()) {
-        match.status = MatchStatus.Live;
+        if (isConcluded) {
+          match.status = MatchStatus.Completed;
+        } else {
+          match.status = MatchStatus.Live;
+        }
 
-        // If we're live, parse the scores
+        // If we're live or done, parse the scores
         const score = matchDetails.querySelector('.versus > div')?.textContent;
         const scores = score?.split(':');
         if (scores) {
