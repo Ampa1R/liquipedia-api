@@ -37,7 +37,7 @@
     "typescript": "^4.5.5"
   },
   "dependencies": {
-    "axios": "^0.25.0",
+    "axios": "0.28",
     "node-html-parser": "^5.2.0"
   }
 }
