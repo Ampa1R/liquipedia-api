@@ -12,9 +12,11 @@
     "liquipedia",
     "dota",
     "csgo",
+    "pubgmobile",
     "esports",
     "dota2",
-    "counter-strike"
+    "counter-strike",
+    "battle-royale"
   ],
   "repository": "github:Ampa1R/liquipedia-api",
   "bugs": {
