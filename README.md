@@ -231,3 +231,172 @@ api.dota.getTournaments()
 ]
 ```
 </details>
+
+###  PUBG Mobile
+
+#### getTeams
+```ts
+api.pubgmobile.getTeams()
+```
+<details>
+  <summary>response example</summary>
+
+```ts
+[
+  {
+    name: 'Team Soul',
+    region: 'India',
+    url: 'https://liquipedia.net/pubgmobile/Team_Soul',
+    logo: 'https://liquipedia.net/commons/images/thumb/.../Team_Soul_logo.png'
+  },
+  {
+    name: 'GodLike Esports',
+    region: 'India',
+    url: 'https://liquipedia.net/pubgmobile/GodLike_Esports',
+    logo: 'https://liquipedia.net/commons/images/thumb/.../GodLike_Esports_logo.png'
+  },
+]
+```
+</details>
+
+#### getTransfers
+```ts
+api.pubgmobile.getTransfers()
+```
+<details>
+  <summary>response example</summary>
+
+```ts
+[
+  {
+    date: 2023-01-15T00:00:00.000Z,
+    players: ['ScoutOP'],
+    from: { team: 'Team Soul', position: undefined },
+    to: { team: 'GodLike Esports', position: undefined }
+  },
+]
+```
+</details>
+
+#### getMatches
+```ts
+api.pubgmobile.getMatches()
+```
+<details>
+  <summary>response example</summary>
+
+```ts
+[
+  {
+    leftTeam: { name: 'Team Soul', shortName: 'TS', currentScore: 1 },
+    rightTeam: { name: 'GodLike Esports', shortName: 'GL', currentScore: 0 },
+    bestOf: 3,
+    status: 'Live',
+    startTime: 2023-01-15T18:00:00.000Z,
+    twitchStream: 'https://twitch.tv/battlegroundsmobileindia',
+    tournamentName: 'Battlegrounds Mobile India Series 2023',
+    tournamentShortName: 'BGMI Series 2023'
+  }
+]
+```
+</details>
+
+#### getMaps
+```ts
+api.pubgmobile.getMaps()
+```
+<details>
+  <summary>response example</summary>
+
+```ts
+[
+  {
+    name: 'Erangel',
+    type: 'Battle Royale',
+    img: 'https://liquipedia.net/commons/images/thumb/.../Erangel.png',
+    url: 'https://liquipedia.net/pubgmobile/Erangel'
+  },
+  {
+    name: 'Miramar',
+    type: 'Battle Royale',
+    img: 'https://liquipedia.net/commons/images/thumb/.../Miramar.png',
+    url: 'https://liquipedia.net/pubgmobile/Miramar'
+  },
+]
+```
+</details>
+
+#### getWeapons
+```ts
+api.pubgmobile.getWeapons()
+```
+<details>
+  <summary>response example</summary>
+
+```ts
+[
+  {
+    name: 'AKM',
+    category: 'Assault Rifle',
+    img: 'https://liquipedia.net/commons/images/thumb/.../AKM.png',
+    url: 'https://liquipedia.net/pubgmobile/AKM'
+  },
+  {
+    name: 'M416',
+    category: 'Assault Rifle',
+    img: 'https://liquipedia.net/commons/images/thumb/.../M416.png',
+    url: 'https://liquipedia.net/pubgmobile/M416'
+  },
+]
+```
+</details>
+
+#### getVehicles
+```ts
+api.pubgmobile.getVehicles()
+```
+<details>
+  <summary>response example</summary>
+
+```ts
+[
+  {
+    name: 'UAZ',
+    category: 'Land Vehicle',
+    img: 'https://liquipedia.net/commons/images/thumb/.../UAZ.png',
+    url: 'https://liquipedia.net/pubgmobile/UAZ'
+  },
+  {
+    name: 'Motorboat',
+    category: 'Water Vehicle',
+    img: 'https://liquipedia.net/commons/images/thumb/.../Motorboat.png',
+    url: 'https://liquipedia.net/pubgmobile/Motorboat'
+  },
+]
+```
+</details>
+
+#### getTournaments
+```ts
+api.pubgmobile.getTournaments()
+```
+<details>
+  <summary>response example</summary>
+
+```ts
+[
+  {
+    status: 'Upcoming',
+    tier: 'Tier 1',
+    name: 'PUBG Mobile Global Championship 2023',
+    url: 'https://liquipedia.net/pubgmobile/PUBG_Mobile_Global_Championship/2023',
+    dates: 'Nov 15 - Dec 20, 2023',
+    prizePool: '$2,000,000',
+    teams: '16',
+    hostLocation: 'Dubai, UAE',
+    winner: 'TBD',
+    runnerUp: 'TBD'
+  },
+]
+```
+</details>
